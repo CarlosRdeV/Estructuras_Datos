@@ -13,8 +13,13 @@ public class EjerciciosFaciles {
      * @return El número más grande
      */
     public static int encontrarMaximo(int[] numeros) {
-        // TODO: Implementar este método
-        return 0;
+        int max = numeros[0];
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] > max) {
+                max = numeros[i];
+            }
+        }
+        return max;
     }
     
     /**
@@ -23,8 +28,26 @@ public class EjerciciosFaciles {
      * @return La suma de todos los elementos
      */
     public static int sumarElementos(int[] numeros) {
-        // TODO: Implementar este método
-        return 0;
+        int suma = 0;
+        for (int numero : numeros) {
+            suma += numero;
+        }
+        return suma;
+    }
+
+    /**
+     * Ejercicio 3: Cuantos numeros pares hay en un array
+     * @param numeros Array de enteros
+     * @return Conteo de pares en el Array
+     */
+    public static int contarPares(int[] numeros) {
+        int contador = 0;
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 == 0) {
+                contador++;
+            }
+        }
+        return contador;
     }
     
     /**
@@ -43,5 +66,7 @@ public class EjerciciosFaciles {
         
         // Probar ejercicio 2
         System.out.println("Suma: " + sumarElementos(numeros));
+
+        System.out.println("Contar pares: " + contarPares(numeros));
     }
 }
